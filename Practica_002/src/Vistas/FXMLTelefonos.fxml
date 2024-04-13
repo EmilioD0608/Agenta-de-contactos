@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.FXMLTelefonosController">
+   <children>
+      <GridPane prefHeight="408.0" prefWidth="610.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="235.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F4D03F;" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="btn_cerrar" contentDisplay="TOP" layoutX="521.0" layoutY="2.0" mnemonicParsing="false" onAction="#acc_cerrarPantalla" prefHeight="57.0" prefWidth="46.0" text="cerrar">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/cerrar-sesion.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_grabar" contentDisplay="TOP" layoutX="388.0" layoutY="2.0" mnemonicParsing="false" onAction="#acc_grabar" prefHeight="67.0" prefWidth="124.0" text="guardar">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/disquete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <ComboBox fx:id="cbo_contactos" layoutX="220.0" layoutY="27.0" onAction="#acc_clickComboContacto" onKeyPressed="#cbo_contactos_On_Key_Pressed" prefHeight="34.0" prefWidth="220.0" />
+                  <Label layoutX="147.0" layoutY="36.0" text="Contactos" />
+                  <Label layoutX="152.0" layoutY="106.0" text="Numero" />
+                  <Label layoutX="145.0" layoutY="159.0" text="Operadora" />
+                  <TextField fx:id="txt_numero" layoutX="220.0" layoutY="102.0" onKeyPressed="#txt_numero_Key_Pressed" prefHeight="25.0" prefWidth="196.0" />
+                  <TextField fx:id="txt_operadora" layoutX="220.0" layoutY="155.0" onKeyPressed="#txt_operadora_Key_Pressed" prefHeight="25.0" prefWidth="196.0" />
+               </children></Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F4D03F;">
+               <children>
+                  <Label layoutX="172.0" layoutY="25.0" text="Registro Telefonos">
+                     <font>
+                        <Font name="Bell MT" size="34.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
